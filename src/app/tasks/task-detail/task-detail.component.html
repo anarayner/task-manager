@@ -1,0 +1,9 @@
+<div *ngIf="task">
+  <h2>{{task.title}}</h2>
+  <p><strong>ID:</strong> {{ task.id }}</p>
+  <p><strong>Completed:</strong> {{ task.completed }}</p>
+</div>
+
+<div>
+  <button mat-button color="primary" (click)="goHome()">Go Home</button>
+</div>

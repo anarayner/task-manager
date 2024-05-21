@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{isEditMode? 'Edit Task' : 'Add Task'}}</h1>
+<div mat-dialog-content>
+   <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+         <input matInput placeholder="Title" formControlName="title">
+      </mat-form-field>
+      <mat-checkbox formControlName="completed">Completed</mat-checkbox>
+   </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" (click)="onSubmit()">{{ isEditMode ? 'Update' : 'Add' }}</button>
+</div>
